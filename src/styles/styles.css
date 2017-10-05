@@ -15,13 +15,22 @@ body {
 
 .app-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  padding: 30px;
   color: white;
 }
 
-.app-title {
-  font-size: 1.5em;
+.app-main {
+  padding: 30px;
+}
+
+.nav-link {
+  display: inline-block;
+  color: #fff;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
