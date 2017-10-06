@@ -1,23 +1,15 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './common/Header';
-import Home from './Home';
-import About from './About';
-import NotFound from './NotFound';
+import Main from './common/Main';
 
 const App = () => (
-  <div className="app">
-    <Header />
-    <main className="app-main">
-      <div className="container">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/*" component={NotFound} />
-        </Switch>
-      </div>
-    </main>
-  </div>
+  <BrowserRouter>
+    <div className="app">
+      <Header />
+      <Main />
+    </div>
+  </BrowserRouter>
 );
 
 export default App;
