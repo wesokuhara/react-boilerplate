@@ -1,21 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TodoItem = ({ completed, text, onClick }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
-    {text}
-  </li>
-);
+const TodoItem = ({ completed, text, toggle }) => {
+  const handleChange = e => {
+    toggle();
+  };
+
+  return (
+    <div className="form-check">
+      <label className="form-check-label">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          checked={completed}
+          onChange={handleChange}
+        />
+        {text}
+      </label>
+    </div>
+  );
+};
 
 TodoItem.propTypes = {
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  toggle: PropTypes.func.isRequired
 };
 
 export default TodoItem;

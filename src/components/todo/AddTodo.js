@@ -11,11 +11,8 @@ const AddTodo = ({ actions }) => {
   };
 
   return (
-    <div>
-      <form
-        className="form-inline justify-content-center"
-        onSubmit={handleSubmit}
-      >
+    <div className="add-todo">
+      <form className="form-inline" onSubmit={handleSubmit}>
         <input
           className="form-control"
           ref={node => {

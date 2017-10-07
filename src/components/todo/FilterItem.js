@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FilterItem = ({ setFilter, active, children }) => {
+const FilterItem = ({ active, children, setFilter }) => {
   if (active) {
     return <span>{children}</span>;
   }
