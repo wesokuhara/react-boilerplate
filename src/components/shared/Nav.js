@@ -9,6 +9,9 @@ const Nav = () => (
     <NavLink to="/about" className="nav-link" activeClassName="active">
       About
     </NavLink>
+    <NavLink to="/todos" className="nav-link" activeClassName="active">
+      Todos
+    </NavLink>
   </nav>
 );
 

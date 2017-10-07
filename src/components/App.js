@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Header from './common/Header';
-import Main from './common/Main';
+import Header from './shared/Header';
+import Main from './shared/Main';
 
 const App = () => (
   <BrowserRouter>
