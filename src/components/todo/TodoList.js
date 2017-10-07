@@ -22,7 +22,7 @@ TodoList.propTypes = {
       text: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
-  onTodoClick: PropTypes.func.isRequired
+  actions: PropTypes.object.isRequired
 };
 
 export default TodoList;

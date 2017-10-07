@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FilterItem = ({ active, children, filter }) => {
+const FilterItem = ({ setFilter, active, children }) => {
   if (active) {
     return <span>{children}</span>;
   }
 
   const handleClick = e => {
     e.preventDefault();
-    filter();
+    setFilter();
   };
 
   return (
@@ -22,7 +22,7 @@ const FilterItem = ({ active, children, filter }) => {
 FilterItem.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  setFilter: PropTypes.func.isRequired
 };
 
 export default FilterItem;

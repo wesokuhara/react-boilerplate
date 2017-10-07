@@ -12,13 +12,19 @@ const AddTodo = ({ actions }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        className="form-inline justify-content-center"
+        onSubmit={handleSubmit}
+      >
         <input
+          className="form-control"
           ref={node => {
             input = node;
           }}
         />
-        <button type="submit">Add Todo</button>
+        <button className="btn btn-primary" type="submit">
+          Add Todo
+        </button>
       </form>
     </div>
   );
