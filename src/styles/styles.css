@@ -4,9 +4,6 @@ body {
   font-family: sans-serif;
 }
 
-.app {
-}
-
 .app-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -33,6 +30,10 @@ nav .nav-link.active {
 }
 
 .add-todo {
+  margin-bottom: 20px;
+}
+
+.todo-filter {
   margin-bottom: 20px;
 }
 

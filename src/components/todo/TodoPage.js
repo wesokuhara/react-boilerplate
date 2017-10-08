@@ -6,8 +6,8 @@ import TodoListContainer from '../../containers/TodoListContainer';
 const TodoPage = () => (
   <div>
     <AddTodoContainer />
-    <TodoListContainer />
     <FilterContainer />
+    <TodoListContainer />
   </div>
 );
 

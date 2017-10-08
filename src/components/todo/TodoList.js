@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, actions }) => (
-  <ul>
-    {todos.map(todo => (
-      <TodoItem
-        key={todo.id}
-        {...todo}
-        toggle={() => actions.toggleTodo(todo.id)}
-      />
-    ))}
-  </ul>
+  <div className="todo-list">
+    <ul>
+      {todos.map(todo => (
+        <TodoItem
+          key={todo.id}
+          {...todo}
+          toggle={() => actions.toggleTodo(todo.id)}
+        />
+      ))}
+    </ul>
+  </div>
 );
 
 TodoList.propTypes = {
