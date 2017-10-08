@@ -1,4 +1,4 @@
-import { ADD_TODO, SET_VISIBILITY_FILTER, TOGGLE_TODO } from './actionTypes';
+import { ADD_TODO, SET_VISIBILITY_FILTER, TOGGLE_TODO } from '../constants';
 
 let nextTodoId = 0;
 export const addTodo = text => {

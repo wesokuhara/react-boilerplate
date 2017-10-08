@@ -1,5 +1,5 @@
 import { clone } from 'ramda';
-import { ADD_TODO, TOGGLE_TODO } from '../actions/actionTypes';
+import { ADD_TODO, TOGGLE_TODO } from '../constants';
 
 const todoReducer = (state = [], action) => {
   switch (action.type) {
