@@ -23,13 +23,12 @@ body {
   padding: 30px;
 }
 
-.nav-link {
-  display: inline-block;
+nav .nav-link {
   color: #fff;
 }
 
-.nav-link:hover,
-.nav-link.active {
+nav .nav-link:hover,
+nav .nav-link.active {
   color: #61dafb;
 }
 

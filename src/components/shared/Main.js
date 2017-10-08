@@ -6,13 +6,13 @@ import NotFoundPage from '../NotFoundPage';
 
 const Main = () => (
   <main className="app-main">
-    <div className="container">
+    <section className="container">
       <Switch>
         <Route exact path="/" component={TodoPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/*" component={NotFoundPage} />
       </Switch>
-    </div>
+    </section>
   </main>
 );
 

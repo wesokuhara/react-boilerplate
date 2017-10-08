@@ -12,17 +12,22 @@ const AddTodo = ({ actions }) => {
 
   return (
     <div className="add-todo">
-      <form className="form-inline" onSubmit={handleSubmit}>
-        <input
-          className="form-control"
-          ref={node => {
-            input = node;
-          }}
-        />
-        <button className="btn btn-primary" type="submit">
-          Add Todo
-        </button>
-      </form>
+      <div className="input-group">
+        <form className="form-inline" onSubmit={handleSubmit}>
+          <input
+            className="form-control"
+            placeholder="Enter Todo"
+            ref={node => {
+              input = node;
+            }}
+          />
+          <span className="input-group-btn">
+            <button className="btn btn-primary" type="submit">
+              Add
+            </button>
+          </span>
+        </form>
+      </div>
     </div>
   );
 };

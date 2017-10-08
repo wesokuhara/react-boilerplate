@@ -3,12 +3,19 @@ import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
   <nav>
-    <NavLink to="/" exact className="nav-link" activeClassName="active">
-      Todos
-    </NavLink>
-    <NavLink to="/about" className="nav-link" activeClassName="active">
-      About
-    </NavLink>
+    <ul className="nav justify-content-center">
+      <li className="nav-item">
+        <NavLink to="/" exact className="nav-link" activeClassName="active">
+          Todos
+        </NavLink>
+      </li>
+
+      <li className="nav-item">
+        <NavLink to="/about" className="nav-link" activeClassName="active">
+          About
+        </NavLink>
+      </li>
+    </ul>
   </nav>
 );
 

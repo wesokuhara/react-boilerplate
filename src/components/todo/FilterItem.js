@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const FilterItem = ({ active, children, setFilter }) => {
-  if (active) {
-    return <span>{children}</span>;
-  }
-
+const FilterItem = ({ active, children, filter }) => {
   const handleClick = e => {
     e.preventDefault();
-    setFilter();
+    filter();
   };
+
+  const classes = classNames('nav-link', {
+    active
+  });
 
   return (
     // eslint-disable-next-line
-    <a href="#" onClick={handleClick}>
+    <a href="#" className={classes} onClick={handleClick}>
       {children}
     </a>
   );
@@ -22,7 +23,7 @@ const FilterItem = ({ active, children, setFilter }) => {
 FilterItem.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  setFilter: PropTypes.func.isRequired
+  filter: PropTypes.func.isRequired
 };
 
 export default FilterItem;
