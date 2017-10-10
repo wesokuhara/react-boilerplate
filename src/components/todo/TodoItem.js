@@ -7,17 +7,13 @@ const TodoItem = ({ completed, text, toggle }) => {
   };
 
   return (
-    <div className="form-check">
-      <label className="form-check-label">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          checked={completed}
-          onChange={handleChange}
-        />
-        {text}
-      </label>
-    </div>
+    <tr>
+      <td className="text-center" width="10%">
+        <input type="checkbox" checked={completed} onChange={handleChange} />
+      </td>
+      <td>{text}</td>
+      <td>{completed ? 'Completed' : 'Active'}</td>
+    </tr>
   );
 };
 

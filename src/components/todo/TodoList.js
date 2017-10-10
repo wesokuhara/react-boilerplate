@@ -4,15 +4,24 @@ import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, actions }) => (
   <div className="todo-list">
-    <ul>
-      {todos.map(todo => (
-        <TodoItem
-          key={todo.id}
-          {...todo}
-          toggle={() => actions.toggleTodo(todo.id)}
-        />
-      ))}
-    </ul>
+    <table className="table table-hover">
+      <thead>
+        <tr>
+          <th width="10%" />
+          <th>Title</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {todos.map(todo => (
+          <TodoItem
+            key={todo.id}
+            {...todo}
+            toggle={() => actions.toggleTodo(todo.id)}
+          />
+        ))}
+      </tbody>
+    </table>
   </div>
 );
 

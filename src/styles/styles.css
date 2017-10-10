@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .app-logo {
@@ -30,11 +30,11 @@ nav .nav-link.active {
 }
 
 .add-todo {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .todo-filter {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .btn:hover {

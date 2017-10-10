@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AddTodo = ({ actions }) => {
-  let input;
+  let input = null;
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -11,7 +11,7 @@ const AddTodo = ({ actions }) => {
   };
 
   return (
-    <div className="add-todo">
+    <div className="add-todo col-xs-12 col-md-6">
       <div className="input-group">
         <form className="form-inline" onSubmit={handleSubmit}>
           <input

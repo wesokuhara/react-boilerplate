@@ -3,7 +3,7 @@ import FilterItem from './FilterItem';
 import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../../constants';
 
 const Filter = ({ visibilityFilter, actions }) => (
-  <div className="todo-filter">
+  <div className="todo-filter col-xs-12 col-md-6">
     <ul className="nav nav-pills">
       <li className="nav-item">
         <FilterItem
