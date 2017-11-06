@@ -1,8 +1,12 @@
 import React from 'react';
-import FilterItem from './FilterItem';
-import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../../constants';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-const Filter = ({ visibilityFilter, actions }) => (
+import * as actions from '../actions/filter-actions';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../constants';
+import FilterItem from '../components/todo/FilterItem';
+
+const FilterList = ({ visibilityFilter, actions }) => (
   <div className="todo-filter col-xs-12 col-md-6">
     <ul className="nav nav-pills">
       <li className="nav-item">
@@ -33,4 +37,16 @@ const Filter = ({ visibilityFilter, actions }) => (
   </div>
 );
 
-export default Filter;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    visibilityFilter: state.visibilityFilter
+  };
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FilterList);

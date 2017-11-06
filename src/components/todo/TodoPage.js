@@ -1,13 +1,13 @@
 import React from 'react';
-import FilterContainer from '../../containers/FilterContainer';
 import AddTodoContainer from '../../containers/AddTodoContainer';
 import TodoListContainer from '../../containers/TodoListContainer';
+import FilterListContainer from '../../containers/FilterListContainer';
 
 const TodoPage = () => (
   <div>
     <div className="row">
       <AddTodoContainer />
-      <FilterContainer />
+      <FilterListContainer />
     </div>
     <TodoListContainer />
   </div>
